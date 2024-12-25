@@ -11,4 +11,10 @@ let books = {
       10: {"author": "Samuel Beckett","title": "Molloy, Malone Dies, The Unnamable, the trilogy", "reviews": {} }
 }
 
-module.exports=books;
+let BooksApi = new Promise((resolve,reject) => {
+    setTimeout(() => {
+      resolve(books)
+    },6000)})
+
+// module.exports=books
+module.exports=BooksApi;
